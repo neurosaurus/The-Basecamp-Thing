@@ -1,2 +1,16 @@
-<h1>Projects#new</h1>
-<p>Find me in app/views/projects/new.html.erb</p>
+<h1>Create a new project!</h1>
+
+
+<%= form_for (@project) do |f| %>
+
+  <%= f.label :title %> <%= f.text_field :title%>
+
+  <%= f.label :description %> <%= f.text_area :description%>
+
+  <%= f.label :private %> <%= f.check_box :private%>
+
+<div class="actions">
+  <%=f.submit%>
+</div>
+
+<%end%>
